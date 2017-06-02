@@ -1,0 +1,43 @@
+{
+	"name": "Wisky",
+	"version": "1.0beta",
+	"author": "Petr Kajzar, Lukáš Kejha",
+	"url": "http://www.wikiskripta.eu",
+	"license-name" : "GPL-3.0", 
+	"descriptionmsg": "wisky-desc",
+	"namemsg": "skinname-wisky",
+	"type": "skin",
+	"ValidSkinNames": {
+		"wisky": "Wisky"
+	},
+	"MessagesDirs": {
+		"Wisky": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.wisky": {
+			"position": "top",
+			"styles": {
+				"resources/screen.css" : {
+					"media": "screen"
+				}
+			}
+		},
+        "skins.wisky.js": {
+            "position": "bottom",
+            "scripts": [
+               "resources/ui.js"
+            ]
+        }    
+    },
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Wisky"
+	},
+	"AutoloadClasses": {
+		"SkinWisky": "Wisky.skin.php",
+		"WiskyTemplate": "WiskyTemplate.php"
+	},
+	"manifest_version": 1
+}

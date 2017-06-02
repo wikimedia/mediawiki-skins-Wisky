@@ -1,0 +1,366 @@
+/**
+ * Basic styling for the Wisky skin.
+ *
+ * Wisky skin for MediaWiki
+ *
+ * @file
+ * @ingroup Skins
+ * @author Petr Kajzar (http://www.wikiskripta.eu/index.php/User:Slepi)
+ * @license https://www.gnu.org/licenses/gpl.html GNU General Public License 3.0 or later
+ */
+
+/* =================== Page layout =================== */
+
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.mw-body {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#mw-wrapper {
+    padding: 5rem 1rem;
+    line-height: 1.6em;
+}
+
+#mw-navigation {
+    position: fixed;
+    margin-left: -16rem;
+    padding-top: 3rem;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    z-index: 1000;
+    overflow-y: auto;
+    line-height: 2em;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgb(226, 226, 226);
+}
+
+h1.firstHeading {
+    border: none;
+    color: #777777;
+    margin: 2rem 0;
+}
+
+h2 {
+    border: none;
+    color: #777777;
+    padding: 1rem 0;
+}
+
+/* MediaWiki table */
+
+td.mw-label {
+    vertical-align: top;
+}
+
+/* =================== Anchors =================== */
+
+#mw-wrapper a {
+    color: #0074d9;
+}
+
+#mw-wrapper a.new {
+    color: #ff4136;
+}
+
+/* =================== Header =================== */
+
+#header_sitename {
+    z-index: 1001;
+    position: fixed;
+    width: 110%;
+    left: 0px;
+    top: 0px;
+    height: 2.5rem;
+    background-color: rgb(255, 190, 0);
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px #C0C0C0;
+}
+
+#header_sitename a {
+    color: white;
+    position: relative;
+    top: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-left: 4rem;
+}
+
+#header_sitename a:hover {
+    text-decoration: none;
+}
+
+/* =================== Navigation menu =================== */
+
+/* two menu tabs */
+
+div.mw-portlet#p-menutab {
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 0;
+}
+
+div#p-menutab-edit, div#p-menutab-home {
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    height: 3.5rem;
+    transition: background-color 0.3s ease-out;
+}
+
+div#p-menutab-edit {
+    background-color: #c8c8c8;
+}
+
+#p-menutab img {
+    display: block;
+    margin: 1rem auto;
+}
+
+/* editmenu is hidden and personal tools are visible at start */
+
+#p-editmenu, #p-editorial-links, #p-coll-print_export {
+    display: none;
+}
+
+/* navigation menu */
+
+#mw-navigation .mw-portlet {
+    padding: 0 1rem;
+}
+
+#mw-navigation .mw-portlet a {
+    color: rgb(142, 142, 142);
+}
+
+#mw-navigation ul {
+    list-style: none;
+    margin: 0;
+}
+
+#mw-navigation h3 {
+    color: rgb(61, 61, 61);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#mw-navigation #p-personal #pt-login a {
+    font-weight: bold;
+}
+
+/* dont show "add new section" ("+") in discussion page in the left menu */
+
+#ca-addsection {
+    display: none;
+}
+
+/* =================== Hamburger menu =================== */
+
+.menu-link {
+    position: fixed;
+    display: block;
+    z-index: 1002;
+    left: 1rem;
+}
+
+.inactive-menu-tab {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+/* =================== Notifications and popups =================== */
+
+#pt-notifications-alert, #pt-notifications-notice {
+    float: right;
+    visibility: hidden;
+}
+
+#pt-uls {
+    display: none;
+}
+
+/* =================== Search field =================== */
+
+input#searchInput {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    height: 2.2rem;
+    float: right;
+    border: 1px solid white;
+    border-radius: 2.2rem;
+    -webkit-appearance: textfield;
+    margin-left: 3.5rem;
+    z-index: 1005;
+}
+
+input#searchInput:focus {
+    outline: none;
+}
+
+#p-search button {
+    z-index: 1006;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* language selector of the search field */
+
+div.imeselector.imeselector-toggle {
+    z-index: 2000 !important;
+}
+
+/* suggestions */
+
+div.suggestions {
+    position: fixed;
+    right: 6px !important;
+}
+
+/* fixes and placeholders */
+
+::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+    vertical-align: middle;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    vertical-align: middle;
+}
+
+:-ms-input-placeholder {
+    vertical-align: middle;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    vertical-align: middle;
+}
+
+/* =================== Footer =================== */
+
+#mw-footer {
+    clear: both;
+    border-top: 1px solid black;
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 1280px;
+    font-size: smaller;
+}
+
+#mw-footer ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+#mw-footer ul li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+/* =================== Preferences =================== */
+
+ul#preftoc li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+#preftoc li a {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.jsprefs {
+    clear: both;
+}
+
+
+/* =================== Responsive part =================== */
+
+/* basic layout styling */
+
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+
+    /* open left menu styling ("active" class added by JS) */
+
+    #layout.active {
+        padding-left: 16rem;
+    }
+
+    #layout.active #mw-navigation {
+        left: 16rem;
+        width: 16rem;
+    }
+
+/* smaller media - tablets and phones */
+
+@media(max-width:800px) {
+
+    #layout.active {
+        padding-left: 100%;
+    }
+
+     #searchInput {
+        width: 16rem;
+    }
+
+    /* when menu opened, dont scroll layout */
+
+    body.menufreeze, body.menufreeze #layout {
+        overflow: hidden;
+    }
+
+    /* grid menu on tablets */
+
+    #p-editmenu, #p-personal, #p-navigation, #p-rel-portals, #p-rel-exam, #p-tb, #p-editorial-links, #p-coll-print_export {
+        margin-right: 1.5rem;
+        float: left;
+    }
+}
+
+/* dont show heading on small phones */
+
+@media(max-width:450px) {
+    #header_sitename a {
+        display: none;
+    }
+}
+
+/* transitions */
+
+#layout,
+#mw-navigation,
+#searchInput,
+#p-search button,
+#header_sitename a,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}

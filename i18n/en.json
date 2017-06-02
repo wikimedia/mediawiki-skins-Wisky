@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [ "Petr Kajzar", "Lukas Kejha" ]
+	},
+	"skinname-wisky": "Wisky",
+	"wisky-desc": "A responsive skin for WikiSkripta and WikiLectures projects",
+	"mw-wisky-headline-article": "Article tools"
+}
