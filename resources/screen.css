@@ -81,6 +81,7 @@ td.mw-label {
     height: 2.5rem;
     background-color: rgb(255, 190, 0);
     padding: 5px;
+    box-shadow: 2px 2px 2px 2px #C0C0C0;
 }
 
 #header_sitename a {
