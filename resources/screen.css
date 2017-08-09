@@ -114,18 +114,14 @@ div#p-menutab-edit, div#p-menutab-home {
     transition: background-color 0.3s ease-out;
 }
 
-div#p-menutab-edit {
-    background-color: #c8c8c8;
-}
-
 #p-menutab img {
     display: block;
     margin: 1rem auto;
 }
 
-/* editmenu is hidden and personal tools are visible at start */
+/* menu hidden: JS will enable it */
 
-#p-editmenu, #p-editorial-links, #p-coll-print_export {
+#p-editmenu, #p-personal, #p-tb, #p-navigation, #p-editorial-links, #p-coll-print_export {
     display: none;
 }
 

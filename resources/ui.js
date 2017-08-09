@@ -149,6 +149,13 @@ $(function() {
     /* create hamburger menu */
     Wisky.createClickableMenu();
 
+    /* if logged in, show edit menu */
+    if (mw.config.get("wgUserName") !== null) {
+        Wisky.showMenuEdit();
+    } else {
+        Wisky.showMenuHome();
+    }
+
     /* merge notifications if logged in */
     if (mw.config.get("wgUserName")) {
         Wisky.mergeNotifications();
@@ -157,9 +164,6 @@ $(function() {
     } else {
         $("#pt-login").insertBefore($("#p-personal ul li:first"));
     }
-
-    /* if logged in, show edit menu */
-    if (mw.config.get("wgUserName") !== null) Wisky.showMenuEdit();
 
 });
 
