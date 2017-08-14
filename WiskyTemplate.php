@@ -83,7 +83,7 @@ class WiskyTemplate extends BaseTemplate {
                     </div>
                     
                     <!-- tab for personal and tools menu -->
-                    <div id="p-menutab-edit" class="inactive-menu-tab">
+                    <div id="p-menutab-edit">
                         <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/pen.png'); ?>">
                     </div>
                 </div>
