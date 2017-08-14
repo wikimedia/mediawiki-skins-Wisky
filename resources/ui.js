@@ -111,14 +111,14 @@ var Wisky = {
      */
     showMenuHome: function() {
 
-        $("#p-editmenu").hide("fast");
-        $("#p-personal").show("fast");
-        $("#p-tb").show("fast");
-        $("#p-navigation").show("fast");
-        if (mw.config.get("wgUserName") !== null) $("#p-editorial-links").hide("fast");
-        $("#p-coll-print_export").hide("fast");
-        if ($("#p-rel-portals ul li").length > 1) $("#p-rel-portals").show("fast");
-        if ($("#p-rel-exam ul li").length > 1) $("#p-rel-exam").show("fast");
+        $("#p-editmenu").hide();
+        $("#p-personal").fadeIn("fast");
+        $("#p-tb").fadeIn("fast");
+        $("#p-navigation").fadeIn("fast");
+        if (mw.config.get("wgUserName") !== null) $("#p-editorial-links").hide();
+        $("#p-coll-print_export").hide();
+        if ($("#p-rel-portals ul li").length > 1) $("#p-rel-portals").fadeIn("fast");
+        if ($("#p-rel-exam ul li").length > 1) $("#p-rel-exam").fadeIn("fast");
         $("#p-menutab-home").css("background-color", "transparent").removeClass("inactive-menu-tab");
         $("#p-menutab-edit").css("background-color", "#c8c8c8").addClass("inactive-menu-tab");
 
@@ -129,14 +129,14 @@ var Wisky = {
      */
     showMenuEdit: function() {
 
-        $("#p-editmenu").show("fast");
-        $("#p-personal").hide("fast");
-        $("#p-tb").hide("fast");
-        $("#p-navigation").hide("fast");
-        if (mw.config.get("wgUserName") !== null) $("#p-editorial-links").show("fast");
-        $("#p-coll-print_export").show("fast");
-        if ($("#p-rel-portals ul li").length > 1) $("#p-rel-portals").hide("fast");
-        if ($("#p-rel-exam ul li").length > 1) $("#p-rel-exam").hide("fast");
+        $("#p-editmenu").fadeIn("fast");
+        $("#p-personal").hide();
+        $("#p-tb").hide();
+        $("#p-navigation").hide();
+        if (mw.config.get("wgUserName") !== null) $("#p-editorial-links").fadeIn("fast");
+        $("#p-coll-print_export").fadeIn("fast");
+        if ($("#p-rel-portals ul li").length > 1) $("#p-rel-portals").hide();
+        if ($("#p-rel-exam ul li").length > 1) $("#p-rel-exam").hide();
         $("#p-menutab-edit").css("background-color", "transparent").removeClass("inactive-menu-tab");
         $("#p-menutab-home").css("background-color", "#c8c8c8").addClass("inactive-menu-tab");
 
