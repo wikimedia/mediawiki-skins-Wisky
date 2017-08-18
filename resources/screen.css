@@ -55,7 +55,7 @@ h2 {
 
 /* scrolling workaround */
 
-h2::before, h3::before, h4:: before, h5::before {
+.mw-headline::before {
     margin-top: -2.5rem;
     height: 2.5rem;
     content: " ";
