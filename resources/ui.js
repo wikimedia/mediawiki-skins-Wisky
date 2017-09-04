@@ -195,4 +195,4 @@ $("#p-menutab-edit").click(function() {
 
 /* fix Visual Editor bar */
 
-$(window).scroll(Wisky.showVisualBar);
+$(window).scroll(function(){Wisky.showVisualBar();});
