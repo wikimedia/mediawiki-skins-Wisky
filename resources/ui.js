@@ -147,7 +147,7 @@ var Wisky = {
      */
     showVisualBar: function() {
 
-        if($(".oo-ui-toolbar-bar").css("right") != "auto") {
+        if($(".oo-ui-toolbar-bar").css("right") != "auto" || $(".oo-ui-toolbar-bar").css("right") != "0px") {
             $(".oo-ui-toolbar.ve-ui-toolbar.ve-ui-dir-inline-ltr.ve-ui-dir-block-ltr.ve-ui-targetToolbar.ve-ui-positionedTargetToolbar.ve-init-mw-desktopArticleTarget-toolbar.ve-ui-toolbar-floating > .oo-ui-toolbar-bar").css("top", "3rem");
         } else {
             $(".oo-ui-toolbar-bar").css("top", "auto");
