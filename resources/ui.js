@@ -140,7 +140,20 @@ var Wisky = {
         $("#p-menutab-edit").css("background-color", "transparent").removeClass("inactive-menu-tab");
         $("#p-menutab-home").css("background-color", "#c8c8c8").addClass("inactive-menu-tab");
 
+    },
+
+    /**
+     * Visual Editor fix: show the edit bar under the main orange bar
+     */
+    showVisualBar: function() {
+
+        if($(".oo-ui-toolbar-bar").css("right") != "auto") {
+            $(".oo-ui-toolbar.ve-ui-toolbar.ve-ui-dir-inline-ltr.ve-ui-dir-block-ltr.ve-ui-targetToolbar.ve-ui-positionedTargetToolbar.ve-init-mw-desktopArticleTarget-toolbar.ve-ui-toolbar-floating > .oo-ui-toolbar-bar").css("top", "3rem");
+        } else {
+            $(".oo-ui-toolbar.ve-ui-toolbar.ve-ui-dir-inline-ltr.ve-ui-dir-block-ltr.ve-ui-targetToolbar.ve-ui-positionedTargetToolbar.ve-init-mw-desktopArticleTarget-toolbar.ve-ui-toolbar-floating > .oo-ui-toolbar-bar").css("top", "auto");
+
     }
+
 }
 
 /* play that */
@@ -179,3 +192,6 @@ $("#p-menutab-edit").click(function() {
     Wisky.showMenuEdit();
 });
 
+/* fix Visual Editor bar */
+
+window.onscroll = function() {Wisky.showVisualBar();}
