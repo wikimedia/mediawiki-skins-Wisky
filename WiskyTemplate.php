@@ -60,19 +60,19 @@ class WiskyTemplate extends BaseTemplate {
         <div id="layout">
             
             <!-- main header -->
-            <div id="header_sitename">
+            <div id="header_sitename" class="noprint">
                 <a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"><?php echo $this->text('sitename'); ?></a>
             </div>
             
             <!-- hamburger menu -->
-            <div id="hamb-menu">
+            <div id="hamb-menu" class="noprint">
                 <a href="#mw-navigation" id="menuLink" class="menu-link">
                     <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/hamb.png'); ?>">
                 </a>
             </div>
 
             <!-- navigation menu -->
-            <div id="mw-navigation">
+            <div id="mw-navigation" class="noprint">
                 
                 <!-- two menu tabs: one for edits and one for personal tools -->
                 <div role="navigation" class="mw-portlet" id="p-menutab">
@@ -131,7 +131,7 @@ class WiskyTemplate extends BaseTemplate {
             <form
                     action="<?php $this->text( 'wgScript' ) ?>"
                     role="search"
-                    class="mw-portlet"
+                    class="mw-portlet noprint"
                     id="p-search"
                 >
                     <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
