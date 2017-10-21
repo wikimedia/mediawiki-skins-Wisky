@@ -368,6 +368,15 @@ ul#preftoc li {
     }
 }
 
+/* search field */
+@media screen and (min-width:800px) {
+
+    input#searchInput {
+        width: 22rem;
+    }
+
+}
+
 /* transitions */
 
 #layout,
