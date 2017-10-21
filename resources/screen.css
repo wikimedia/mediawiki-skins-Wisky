@@ -38,7 +38,7 @@ body {
     overflow-y: auto;
     line-height: 2em;
     -webkit-overflow-scrolling: touch;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(236, 236, 236);
 }
 
 h1.firstHeading {
@@ -146,7 +146,7 @@ div#p-menutab-edit, div#p-menutab-home {
 }
 
 #mw-navigation .mw-portlet a {
-    color: rgb(142, 142, 142);
+    color: rgb(100, 100, 100);
 }
 
 #mw-navigation ul {
