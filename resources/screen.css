@@ -316,6 +316,8 @@ ul#preftoc li {
 
     /* open left menu styling ("active" class added by JS) */
 
+@media only screen {
+
     #layout.active {
         padding-left: 16rem;
     }
@@ -324,6 +326,8 @@ ul#preftoc li {
         left: 16rem;
         width: 16rem;
     }
+    
+}
 
 /* smaller media - tablets and phones */
 
