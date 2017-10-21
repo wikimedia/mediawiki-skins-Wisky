@@ -2,7 +2,7 @@
 Skin for MediaWiki
 
 ## Decription
-This skin is intended for MediaWiki 1.28. Graphic design was created by Lukas Kejha (http://www.lkgraphics.cz), code by Slepi (https://petrkajzar.cz).
+This skin is intended for MediaWiki 1.28. Graphic design was created by Lukas Kejha (http://www.lkgraphics.cz), code by Slepi (http://www.wikiskripta.eu/index.php/User:Slepi).
 
 ## Instalation
 * Make sure you have MediaWiki 1.28 installed.
