@@ -100,8 +100,14 @@ var Wisky = {
                 // create menu item
                 mw.util.addPortletLink("p-personal", mw.config.get("wgServer") + mw.config.get("wgScriptPath") + "/index.php?title=Special:Notifications", echomessage, "pt-new-notif", echomessage, "y", document.getElementById("pt-piskoviste"));
 
+                // merged number
+                notifCount = Number($("#pt-notifications-notice a").text()) + Number($("#pt-notifications-alert a").text());
+                
+                // add active notification, if needed
+                if(notifCount > 0) document.getElementById("pt-new-notif").className += " activeNotification";
+                
                 // merge notifications and change menu item
-                $("#pt-new-notif a").html(Number($("#pt-notifications-notice a").text()) + Number($("#pt-notifications-alert a").text()) + " " + echomessage.toLowerCase());
+                $("#pt-new-notif a").html(notifCount + " " + echomessage.toLowerCase());
             });
 
     },
@@ -143,7 +149,7 @@ var Wisky = {
     },
 
     /**
-   Â Â * Visual Editor fix: show the edit bar under the main orange bar
+     * Visual Editor fix: show the edit bar under the main orange bar
      */
     showVisualBar: function() {
 
