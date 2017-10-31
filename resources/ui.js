@@ -18,27 +18,20 @@ var Wisky = {
 
         /* basic DOM variables */
 
-        var layout = document.getElementById("layout"),
-            menu = document.getElementById("mw-navigation"),
-            menuLink = document.getElementById("menuLink"),
-            body = document.getElementsByTagName("body")[0];
+        var menuLink = document.getElementById("menuLink");
 
         /* onclick hamburger menu */
 
         menuLink.onclick = function(e) {
 
-            /* active class of the layout */
-
-            var active = "active";
-
             /* toggle classes */
 
             e.preventDefault();
-            Wisky.toggleClass(layout, active);
+            $("#menuLink").toggleClass("active");
 
             /* menufreeze used to stop scrolling layout on smaller screens when menu opened */
 
-            Wisky.toggleClass(body, "menufreeze");
+            $("body").toggleClass("menufreeze");
 
             /* show or hide menu on the whole screen on smaller displays */
 
@@ -48,38 +41,6 @@ var Wisky = {
             }
         };
 
-    },
-
-    /**
-     * Toggle class for the element (used for active layout).
-     *
-     * @param {element} Which element to toggle.
-     * @param {className} Which CSS class to toggle.
-     */
-    toggleClass: function(element, className) {
-
-        /* watch for classes */
-
-        var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
-
-        /* if the className present, cut it away */
-
-        for (; i < length; i++) {
-            if (classes[i] === className) {
-                classes.splice(i, 1);
-                break;
-            }
-        }
-
-        /* if the className is not found, add it */
-
-        if (length === classes.length) {
-            classes.push(className);
-        }
-
-        element.className = classes.join(" ");
     },
 
     /**
@@ -149,7 +110,7 @@ var Wisky = {
     },
 
     /**
-     * Visual Editor fix: show the edit bar under the main orange bar
+   ï¿½ï¿½* Visual Editor fix: show the edit bar under the main orange bar
      */
     showVisualBar: function() {
 
