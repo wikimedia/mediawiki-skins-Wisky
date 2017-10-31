@@ -27,7 +27,7 @@ var Wisky = {
             /* toggle classes */
 
             e.preventDefault();
-            $("#menuLink").toggleClass("active");
+            $("#layout").toggleClass("active");
 
             /* menufreeze used to stop scrolling layout on smaller screens when menu opened */
 
