@@ -14,32 +14,22 @@ var Wisky = {
     /**
      * Create hamburger menu
      */
-    createClickableMenu: function() {
+    clickableMenu: function() {
 
-        /* basic DOM variables */
+        /* toggle classes */
 
-        var menuLink = document.getElementById("menuLink");
+        $("#layout").toggleClass("active");
 
-        /* onclick hamburger menu */
+        /* menufreeze used to stop scrolling layout on smaller screens when menu opened */
 
-        menuLink.onclick = function(e) {
+        $("body").toggleClass("menufreeze");
 
-            /* toggle classes */
+        /* show or hide menu on the whole screen on smaller displays */
 
-            e.preventDefault();
-            $("#layout").toggleClass("active");
-
-            /* menufreeze used to stop scrolling layout on smaller screens when menu opened */
-
-            $("body").toggleClass("menufreeze");
-
-            /* show or hide menu on the whole screen on smaller displays */
-
-            if (window.innerWidth < 800) {
-                $("#mw-navigation").css("width", "200px");
-                $(".menufreeze #mw-navigation").css("width", window.innerWidth + "px");
-            }
-        };
+        if (window.innerWidth < 800) {
+            $("#mw-navigation").css("width", "200px");
+            $(".menufreeze #mw-navigation").css("width", window.innerWidth + "px");
+        }
 
     },
 
@@ -127,8 +117,11 @@ var Wisky = {
 /* play that */
 $(function() {
 
-    /* create hamburger menu */
-    Wisky.createClickableMenu();
+    /* clickable menu */
+    $("#menuLink").click(function(event) {
+        event.preventDefault();
+        Wisky.clickableMenu();
+    });
 
     /* if logged in, show edit menu */
     if (mw.config.get("wgUserName") !== null) {
