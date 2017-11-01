@@ -19,6 +19,18 @@ var Wisky = {
         /* toggle classes */
 
         $("#layout").toggleClass("active");
+        
+        /* Internet Explorer 11 workaround for hamburger menu */
+        
+        if( $("#layout.active").length > 0 ) {
+            $("#layout").css('padding-left', '16rem');
+            $("#mw-navigation").css('left', '16rem');
+            $("#mw-navigation").css('width', '16rem');
+        } else {
+            $("#layout").css('padding-left', '');
+            $("#mw-navigation").css('left', '');
+            $("#mw-navigation").css('width', '');
+        }
 
         /* menufreeze used to stop scrolling layout on smaller screens when menu opened */
 
