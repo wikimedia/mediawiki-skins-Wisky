@@ -19,4 +19,4 @@ This skin is available in English and Czech language. For other languages, just 
 
 ## Authors
 * [Lukáš Kejha](http://www.lkgraphics.cz), Petr Kajzar
-* GNU License, Copyright (c) 2017 First Faculty of Medicine, Charles University
+* GNU GPL License, Copyright (c) 2017 First Faculty of Medicine, Charles University
