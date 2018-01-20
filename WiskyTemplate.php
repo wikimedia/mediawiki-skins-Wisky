@@ -67,7 +67,7 @@ class WiskyTemplate extends BaseTemplate {
             
             <!-- hamburger menu -->
             <div id="hamb-menu" class="noprint">
-                <a href="#mw-navigation" id="menuLink" class="menu-link">
+                <a href="#mw-navigation" id="menuLink" class="menu-link" onclick="event.preventDefault();">
                     <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/hamb.png'); ?>">
                 </a>
             </div>

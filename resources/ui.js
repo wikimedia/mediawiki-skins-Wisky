@@ -113,7 +113,7 @@ var Wisky = {
     },
 
     /**
-   ��* Visual Editor fix: show the edit bar under the main orange bar
+     * Visual Editor fix: show the edit bar under the main orange bar
      */
     showVisualBar: function() {
 
@@ -134,6 +134,7 @@ $(function() {
     $("#menuLink").click(function(event) {
         event.preventDefault();
         Wisky.clickableMenu();
+        $("menuLink").css("cursor", "auto");
     });
 
     /* if logged in, show edit menu */
