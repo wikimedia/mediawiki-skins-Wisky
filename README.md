@@ -2,7 +2,7 @@
 Skin for MediaWiki
 
 ## Decription
-This skin is intended for MediaWiki 1.28. Graphic design was created by Lukas Kejha (http://www.lkgraphics.cz), code by Slepi (http://www.wikiskripta.eu/index.php/User:Slepi).
+This skin is intended for MediaWiki 1.28.
 
 ## Instalation
 * Make sure you have MediaWiki 1.28 installed.
@@ -16,3 +16,7 @@ wfLoadSkin('Wisky');
 
 ## Internationalization
 This skin is available in English and Czech language. For other languages, just edit files in /i18n/ folder.
+
+## Authors
+* [Lukáš Kejha](http://www.lkgraphics.cz), Petr Kajzar
+* GNU License, Copyright (c) 2017 First Faculty of Medicine, Charles University

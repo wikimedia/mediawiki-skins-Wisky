@@ -6,7 +6,8 @@
  *
  * @file
  * @ingroup Skins
- * @author Petr Kajzar (http://www.wikiskripta.eu/index.php/User:Slepi)
+ * @author Petr Kajzar
+ * @copyright First Faculty of Medicine, Charles University, Prague
  * @license https://www.gnu.org/licenses/gpl.html GNU General Public License 3.0 or later
  */
 var Wisky = {
