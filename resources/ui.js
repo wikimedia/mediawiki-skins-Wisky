@@ -134,8 +134,10 @@ $(function() {
     $("#menuLink").click(function(event) {
         event.preventDefault();
         Wisky.clickableMenu();
-        $("menuLink").css("cursor", "auto");
     });
+
+    /* change loading cursor to normal hand */
+    $("menuLink").css("cursor", "auto");
 
     /* if logged in, show edit menu */
     if (mw.config.get("wgUserName") !== null) {
