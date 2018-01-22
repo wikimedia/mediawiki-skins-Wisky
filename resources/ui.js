@@ -137,7 +137,7 @@ $(function() {
     });
 
     /* change loading cursor to normal hand */
-    $("menuLink").css("cursor", "auto");
+    $("#menuLink").css("cursor", "pointer");
 
     /* if logged in, show edit menu */
     if (mw.config.get("wgUserName") !== null) {
