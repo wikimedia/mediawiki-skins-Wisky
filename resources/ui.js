@@ -136,8 +136,9 @@ $(function() {
         Wisky.clickableMenu();
     });
 
-    /* change loading cursor to normal hand */
+    /* change loading cursor to normal hand and restore opacity */
     $("#menuLink").css("cursor", "pointer");
+    $("#menuLink").css("opacity", "1");
 
     /* if logged in, show edit menu */
     if (mw.config.get("wgUserName") !== null) {

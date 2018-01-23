@@ -187,6 +187,7 @@ div#p-menutab-edit, div#p-menutab-home {
 
 #menuLink {
     cursor: wait;
+    opacity: 0.4;
 }
 
 .inactive-menu-tab {
