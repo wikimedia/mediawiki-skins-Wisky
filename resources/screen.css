@@ -192,7 +192,7 @@ div#p-menutab-edit, div#p-menutab-home {
 }
 
 .inactive-menu-tab {
-    box-shadow: inset -2px -2px 6px #888888;
+    box-shadow: inset -2px -2px 6px #909090;
 }
 
 /* =================== Notifications and popups =================== */
@@ -256,6 +256,17 @@ div.imeselector.imeselector-toggle {
 div.suggestions {
     position: fixed;
     right: 6px !important;
+	top: 2.7rem !important;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+	border-radius: 0.3rem;
+}
+
+div.suggestions-results {
+	border-radius: 0.3rem 0.3rem 0 0;
+}
+
+div.suggestions-special {
+	border-radius: 0 0 0.3rem 0.3rem;
 }
 
 /* fixes and placeholders */
