@@ -147,7 +147,7 @@ div#p-menutab-edit, div#p-menutab-home {
 /* navigation menu */
 
 #mw-navigation .mw-portlet {
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
 }
 
 #mw-navigation .mw-portlet a {
@@ -164,6 +164,7 @@ div#p-menutab-edit, div#p-menutab-home {
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    border-bottom: 1px solid #cccccc;
 }
 
 #mw-navigation #p-personal #pt-login a {
@@ -191,7 +192,7 @@ div#p-menutab-edit, div#p-menutab-home {
 }
 
 .inactive-menu-tab {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: inset -2px -2px 6px #888888;
 }
 
 /* =================== Notifications and popups =================== */
