@@ -191,8 +191,12 @@ div#p-menutab-edit, div#p-menutab-home {
     opacity: 0.4;
 }
 
-.inactive-menu-tab {
+#p-menutab-home.inactive-menu-tab {
     box-shadow: inset -2px -2px 6px #909090;
+}
+
+#p-menutab-edit.inactive-menu-tab {
+    box-shadow: inset 2px -2px 6px #909090;
 }
 
 /* =================== Notifications and popups =================== */
