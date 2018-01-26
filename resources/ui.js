@@ -62,7 +62,7 @@ var Wisky = {
                 echomessage = message["echo-notification-alert-text-only"];
 
                 // create menu item
-                mw.util.addPortletLink("p-personal", mw.config.get("wgServer") + mw.config.get("wgScriptPath") + "/index.php?title=Special:Notifications", echomessage, "pt-new-notif", echomessage, "y", document.getElementById("pt-piskoviste"));
+                mw.util.addPortletLink("p-personal", mw.config.get("wgServer") + mw.config.get("wgScriptPath") + "/index.php?title=Special:Notifications", echomessage, "pt-new-notif", echomessage, "y", document.getElementById("pt-preferences"));
 
                 // merged number
                 notifCount = Number($("#pt-notifications-notice a").text()) + Number($("#pt-notifications-alert a").text());

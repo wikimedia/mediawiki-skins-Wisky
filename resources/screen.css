@@ -207,8 +207,10 @@ div#p-menutab-edit, div#p-menutab-home {
 }
 
 .activeNotification {
-    background: rgba(255, 190, 0, 1);
-    padding: 5px;
+    background: rgba(255,190,0,0.5);
+    padding: 2px 5px;
+    margin: -2px -5px;
+    border-radius: 4px;
 }
 
 #pt-uls {
