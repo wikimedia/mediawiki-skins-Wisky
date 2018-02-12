@@ -97,6 +97,11 @@ td.mw-label {
     vertical-align: top;
 }
 
+/* edits */
+textarea {
+    font-size: inherit;
+}
+
 /* =================== Anchors =================== */
 
 #mw-wrapper a {
