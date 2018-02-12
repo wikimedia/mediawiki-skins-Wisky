@@ -46,7 +46,7 @@ body {
 h2 {
     border: none;
     padding: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 1rem;
     line-height: 1.3rem;
     margin-bottom: 0.25rem;
@@ -59,10 +59,10 @@ h2 span.mw-headline {
     padding-bottom: 0.25rem;
 }
 
-h3 {font-size: 1.1rem;}
-h4 {font-size: 1.05rem;}
-h5 {font-size: 1.0rem;}
-h6 {font-size: 0.95rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1.1rem;}
+h5 {font-size: 1.05rem;}
+h6 {font-size: 1.00rem;}
 
 h3, h4, h5, h6 {
     font-weight: bold;
@@ -427,7 +427,7 @@ ul#preftoc li {
     }
 
     body {
-        font-size: 0.875rem;
+        font-size: 0.95rem;
     }
 
 }
