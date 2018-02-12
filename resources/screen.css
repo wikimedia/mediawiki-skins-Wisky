@@ -15,6 +15,7 @@
 html,
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #252525;
 }
 
 .mw-body {
@@ -45,17 +46,34 @@ body {
 h2 {
     border: none;
     padding: 1rem 0;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    line-height: 1.3rem;
+    margin-bottom: 0.25rem;
+    font-weight: normal;
 }
 
-h2 {font-size: 1.8rem;}
-h3 {font-size: 1.3rem;}
-h4 {font-size: 1.2rem;}
+h2 span.mw-headline {
+    border-bottom: 1px solid #a2a9b1;
+}
+
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1.15rem;}
 h5 {font-size: 1.1rem;}
 h6 {font-size: 1.0rem;}
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
     font-weight: bold;
-    color: #111111;
+}
+
+h2, h3 {
+    color: #000000;
+}
+
+h4, h5, h6 {
+    color: #666666;
 }
 
 /* scrolling workaround */
@@ -396,11 +414,15 @@ ul#preftoc li {
     }
 }
 
-/* search field */
+/* search field and font size */
 @media screen and (min-width:800px) {
 
     input#searchInput {
         width: 22rem;
+    }
+
+    body {
+        font-size: 0.875rem;
     }
 
 }
