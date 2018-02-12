@@ -48,7 +48,6 @@ h2 {
     padding: 1rem 0;
     font-size: 1.5rem;
     margin-top: 1rem;
-    font-family: 'Linux Libertine','Georgia','Times',serif;
     line-height: 1.3rem;
     margin-bottom: 0.25rem;
     font-weight: normal;
@@ -56,13 +55,15 @@ h2 {
 
 h2 span.mw-headline {
     border-bottom: 1px solid #a2a9b1;
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    padding-bottom: 0.25rem;
 }
 
-h2 {font-size: 1.4rem;}
-h3 {font-size: 1.2rem;}
-h4 {font-size: 1.15rem;}
-h5 {font-size: 1.1rem;}
-h6 {font-size: 1.0rem;}
+h2 {font-size: 1.2rem;}
+h3 {font-size: 1.1rem;}
+h4 {font-size: 1.05rem;}
+h5 {font-size: 1.0rem;}
+h6 {font-size: 0.95rem;}
 
 h3, h4, h5, h6 {
     font-weight: bold;
