@@ -173,3 +173,15 @@ $("#p-menutab-edit").click(function() {
 /* fix Visual Editor bar */
 
 $(window).scroll(function(){Wisky.showVisualBar();});
+
+/* fix suggestion for searchInput */
+
+$("#searchInput").focus(
+    function() {
+        $(".suggestions").css({
+            "position": "fixed",
+            "right": "6px",
+            "top": "2.7rem"
+        });
+    }
+);
