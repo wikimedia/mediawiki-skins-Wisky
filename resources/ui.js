@@ -178,10 +178,8 @@ $(window).scroll(function(){Wisky.showVisualBar();});
 
 $("#searchInput").focus(
     function() {
-        $(".suggestions").css({
-            "position": "fixed",
-            "right": "6px",
-            "top": "2.7rem"
-        });
+        $(".suggestions").css("position", "fixed");
+        $(".suggestions").css("right", "6px");
+        $(".suggestions").css("top", "2.7rem");
     }
 );
