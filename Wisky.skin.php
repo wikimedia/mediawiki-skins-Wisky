@@ -11,7 +11,7 @@
  */
 
 class SkinWisky extends SkinTemplate {
-	public $skinname = 'wisky', $stylename = 'Wisky',
+	public $skinname = 'wisky',
 		$template = 'WiskyTemplate', $useHeadElement = true;
 
     /**
@@ -20,7 +20,7 @@ class SkinWisky extends SkinTemplate {
 	 * @param $out OutputPage
      */
     public function initPage(OutputPage $out) {
- 
+		parent::initPage( $out );
 		/* responsive skin: add meta tag */
         $out->addMeta('viewport', 'width=device-width, initial-scale=1.0');
  
@@ -36,14 +36,4 @@ class SkinWisky extends SkinTemplate {
            'skins.wisky.js'
         ));
 	}
-    
-    /**
-	 * Add user CSS
-	 *
-	 * @param $out OutputPage
-	 */
-    function setupSkinUserCss(OutputPage $out) {
-       parent::setupSkinUserCss($out);
-    }
-    
 }

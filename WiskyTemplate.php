@@ -25,7 +25,7 @@ class WiskyTemplate extends BaseTemplate {
         <div
             role="navigation"
             class="mw-portlet"
-            id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>"
+            id="<?php echo Sanitizer::escapeIdForAttribute( $box['id'] ) ?>"
             <?php echo Linker::tooltip( $box['id'] ) ?>
         >
             
@@ -53,10 +53,22 @@ class WiskyTemplate extends BaseTemplate {
         <?php
     }
 
+    private function getWiskyFooterIcons() {
+        $footericons = $this->get('footericons');
+        foreach ( $footericons as $footerIconsKey => &$footerIconsBlock ) {
+            foreach ( $footerIconsBlock as $footerIconKey => $footerIcon ) {
+                if ( !isset( $footerIcon['src'] ) ) {
+                    unset( $footerIconsBlock[$footerIconKey] );
+                }
+            }
+        }
+        return $footericons;
+    }
     /**
      * Outputs the entire contents of the page
      */
     public function execute() {    
+        $config = $this->getSkin()->getConfig();
         $this->html( 'headelement' ); ?>
         <div id="layout">
             
@@ -68,7 +80,7 @@ class WiskyTemplate extends BaseTemplate {
             <!-- hamburger menu -->
             <div id="hamb-menu" class="noprint">
                 <a href="#mw-navigation" id="menuLink" class="menu-link" onclick="event.preventDefault();">
-                    <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/hamb.png'); ?>">
+                    <img src="<?php echo $config->get( 'StylePath' ); ?>/Wisky/resources/img/hamb.png">
                 </a>
             </div>
 
@@ -80,12 +92,12 @@ class WiskyTemplate extends BaseTemplate {
                     
                     <!-- tab for edit menu -->
                     <div id="p-menutab-home">
-                        <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/user.png'); ?>">
+                        <img src="<?php echo $config->get( 'StylePath' ); ?>/Wisky/resources/img/user.png">
                     </div>
                     
                     <!-- tab for personal and tools menu -->
                     <div id="p-menutab-edit">
-                        <img src="<?php echo $this->getSkin()->getSkinStylePath('resources/img/pen.png'); ?>">
+                        <img src="<?php echo $config->get( 'StylePath' ); ?>/Wisky/resources/img/pen.png">
                     </div>
                 </div>
                 
@@ -138,7 +150,9 @@ class WiskyTemplate extends BaseTemplate {
                     <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
 
                     <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-                    <?php echo $this->makeSearchButton( 'image', array( 'src' => $this->getSkin()->getSkinStylePath( 'resources/img/search-ltr.png') ) ); ?>
+                    <?php echo $this->makeSearchButton( 'image', [
+                        'src' => $this->getSkin()->getConfig()->get( 'StylePath' ) . '/Wisky/resources/img/search-ltr.png',
+                    ] ); ?>
             </form>
 
             <!-- main content -->
@@ -193,7 +207,7 @@ class WiskyTemplate extends BaseTemplate {
                 <?php } ?>
 
                 <ul role="contentinfo">
-                    <?php foreach ( $this->getFooterIcons( 'icononly' ) as $blockName => $footerIcons ) { ?>
+                    <?php foreach ( $this->getWiskyFooterIcons() as $blockName => $footerIcons ) { ?>
                         <li>
                             <?php
                             foreach ( $footerIcons as $icon ) {
