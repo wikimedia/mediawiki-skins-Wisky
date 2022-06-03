@@ -7,8 +7,20 @@
 	"descriptionmsg": "wisky-desc",
 	"namemsg": "skinname-wisky",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
 	"ValidSkinNames": {
-		"wisky": "Wisky"
+		"wisky": {
+			"class": "SkinWisky",
+			"args": [
+				{
+					"bodyOnly": true,
+					"name": "wisky",
+					"template": "WiskyTemplate"
+				}
+			]
+		}
 	},
 	"MessagesDirs": {
 		"Wisky": [

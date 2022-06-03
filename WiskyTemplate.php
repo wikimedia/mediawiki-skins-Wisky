@@ -69,7 +69,7 @@ class WiskyTemplate extends BaseTemplate {
      */
     public function execute() {    
         $config = $this->getSkin()->getConfig();
-        $this->html( 'headelement' ); ?>
+        ?>
         <div id="layout">
             
             <!-- main header -->
@@ -221,10 +221,6 @@ class WiskyTemplate extends BaseTemplate {
         </div>
         
         </div>
-
-        <?php $this->printTrail() ?>
-        </body></html>
-
         <?php
     }
 }
