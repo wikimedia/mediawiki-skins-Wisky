@@ -1,11 +1,11 @@
 # Wisky
 Skin for MediaWiki
 
-## Decription
-This skin is intended for MediaWiki 1.28.
+## Description
 
-## Instalation
-* Make sure you have MediaWiki 1.28 installed.
+This is a maintained fork of https://bitbucket.org/wikiskripta/wisky/ which was originally intended for MediaWiki 1.28. It now follows the MediaWiki releases.
+
+## Installation
 * Download and place the skin folder to your /skins/ folder.
 * Add the following code to your LocalSettings.php:
 
