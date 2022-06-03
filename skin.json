@@ -12,12 +12,19 @@
 	},
 	"ValidSkinNames": {
 		"wisky": {
-			"class": "SkinWisky",
+			"class": "SkinTemplate",
 			"args": [
 				{
 					"bodyOnly": true,
 					"name": "wisky",
-					"template": "WiskyTemplate"
+					"template": "WiskyTemplate",
+					"responsive": true,
+					"styles": [
+						"skins.wisky"
+					],
+					"scripts": [
+						"skins.wisky.js"
+					]
 				}
 			]
 		}
@@ -29,6 +36,21 @@
 	},
 	"ResourceModules": {
 		"skins.wisky": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {
+				"content-links": true,
+				"content-links-external": true,
+				"content-media": true,
+				"interface-message-box": true,
+				"interface-category": true,
+				"content-tables": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true,
+				"elements": true,
+				"interface": true,
+				"logo": true
+			},
 			"position": "top",
 			"styles": {
 				"resources/screen.css" : {
@@ -48,7 +70,6 @@
 		"remoteSkinPath": "Wisky"
 	},
 	"AutoloadClasses": {
-		"SkinWisky": "Wisky.skin.php",
 		"WiskyTemplate": "WiskyTemplate.php"
 	},
 	"manifest_version": 1
